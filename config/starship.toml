@@ -1,0 +1,98 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# This prompt appear when the command is incomplete
+continuation_prompt = "▶▶"
+
+format = """
+$directory\
+$character\
+"""
+right_format = """
+$git_branch\
+$cmd_duration\
+$git_status\
+$conda\
+$rust\
+$c\
+$cpp\
+$lua\
+"""
+
+palette = 'catppuccin'
+
+[palettes.catppuccin]
+background = '#1e1e2e'
+foreground = '#cdd6f4'
+primary = '#94f7c5'
+red = '#fc7b81'
+blue = '#8cc1ff'
+green = '#94f7c5'
+cyan = '#90daff'
+magenta = '#e2a6ff'
+og_green = '#00FF00'
+reddish_orange = '#FF5349'
+lavender = '#b4befe'
+sapphire = '#74c7ec'
+sky = '#89dceb'
+teal = '#94e2d5'
+yellow = '#f9e2af'
+peach = '#fab387'
+maroon = '#eba0ac'
+mauve = '#cba6f7'
+pink = '#f5c2e7'
+flamingo = '#f2cdcd'
+rosewater = '#f5e0dc'
+
+[character]
+success_symbol = '[➜](bold yellow)'
+error_symbol = '[➜](bold reddish_orange)'
+vimcmd_symbol = '[❮](bold green)'
+vimcmd_replace_one_symbol = '[❮](bold purple)'
+vimcmd_replace_symbol = '[❮](bold purple)'
+vimcmd_visual_symbol = '[❮](bold yellow)'
+
+
+[username]
+style_user = 'mauve bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+[c]
+format = 'via [$name $version](bold teal)'
+symbol = 'C '
+detect_extensions = ['c', 'h']
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration](bold sapphire)'
+
+[conda]
+format = '[$symbol$environment](dimmed green) '
+
+[directory]
+style = 'lavender cyan'
+truncation_length = 4
+truncation_symbol = '../'
+home_symbol = ''
+
+[directory.substitutions]
+"docs" = " "
+"down" = " "
+"img" = " "
+
+[python]
+symbol = '👾 '
+pyenv_version_name = true
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+
+[rust]
+format = '[⚙️ $version](rosewater bold)'
+
+[lua]
+format = 'via [🌕 $version](bold blue) '
