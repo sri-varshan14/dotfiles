@@ -6,7 +6,7 @@ This repository contains the configuration files for my Arch Linux setup using t
 
 To use these configuration files, you'll need to have Arch Linux installed and set up with the i3 window manager. Once you have i3 installed and other programs , you can clone this repository into your home directory using the following command:
 
-<detail>
+<details>
 <summary>Install</summary>
 
 ```sh
@@ -26,7 +26,7 @@ cd $HOME/Archlinux-Ascend/
 bash install.sh
 
 ```
-</detail>
+</details>
 
 ## Features
 
